@@ -28,6 +28,10 @@ module AlgoliaSearch
         offset_value+1
       end
 
+      def offset(num)
+        self
+      end
+
       class << self
         def create(results, total_hits, options = {})
           instance = new(results, options[:per_page], options[:page]-1, total_hits)
